@@ -77,6 +77,7 @@
       <Unit7>
         <Filename Value="upingthread.pas"/>
         <IsPartOfProject Value="True"/>
+        <UnitName Value="UPingThread"/>
       </Unit7>
       <Unit8>
         <Filename Value="../../../Downloads/synapse-trunk/ssl_openssl.pas"/>

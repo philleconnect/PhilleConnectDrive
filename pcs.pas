@@ -539,12 +539,7 @@ begin
     end;
     c:=c+1;
   end;
-  {$IFDEF WINDOWS}
-    checkNetworkConnection;
-  {$ENDIF}
-  {$IFDEF LINUX}
-    trueNetworkResult;
-  {$ENDIF}
+  checkNetworkConnection;
 end;
 
 procedure Twindow.loadConfig;

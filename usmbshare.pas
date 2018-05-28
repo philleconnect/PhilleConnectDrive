@@ -113,6 +113,14 @@ begin
     process.ShowWindow:=swoHIDE;
     process.execute;
     process.free;
+    process:=TProcess.create(nil);
+    process.executable:='sh';
+    process.parameters.add('-c');
+    process.parameters.add('rm -d '+path);
+    process.Options:=process.Options + [poWaitOnExit, poUsePipes];
+    process.ShowWindow:=swoHIDE;
+    process.execute;
+    process.free;
   {$ENDIF}
 end;
 
