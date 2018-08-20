@@ -4,7 +4,7 @@ object window: Twindow
   Top = 36
   Width = 1024
   Caption = 'PhilleConnect Drive'
-  ClientHeight = 691
+  ClientHeight = 700
   ClientWidth = 1024
   Constraints.MinHeight = 720
   Constraints.MinWidth = 1024
@@ -12,7 +12,7 @@ object window: Twindow
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   OnKeyDown = FormKeyDown
-  LCLVersion = '1.8.2.0'
+  LCLVersion = '1.8.4.0'
   object logo: TImage
     Left = 8
     Height = 90
@@ -497,9 +497,9 @@ object window: Twindow
   end
   object headline: TLabel
     Left = 104
-    Height = 69
+    Height = 67
     Top = 24
-    Width = 459
+    Width = 428
     Caption = 'PhilleConnect Drive'
     Font.Height = -50
     ParentColor = False
@@ -507,9 +507,9 @@ object window: Twindow
   end
   object versionLabel: TLabel
     Left = 8
-    Height = 19
-    Top = 667
-    Width = 195
+    Height = 15
+    Top = 680
+    Width = 169
     Anchors = [akLeft, akBottom]
     BidiMode = bdRightToLeft
     Caption = 'PhilleConnect macOS v0.1 Build'
@@ -517,19 +517,19 @@ object window: Twindow
     ParentColor = False
   end
   object infoLabel: TLabel
-    Left = 785
-    Height = 19
+    Left = 808
+    Height = 15
     Top = 8
-    Width = 174
+    Width = 151
     Anchors = [akTop, akRight]
     Caption = 'Bis zu 3 Schüler können sich '
     ParentColor = False
   end
   object infoLabel2: TLabel
-    Left = 767
-    Height = 19
+    Left = 808
+    Height = 15
     Top = 24
-    Width = 248
+    Width = 207
     Anchors = [akTop, akRight]
     Caption = 'gleichzeitig an diesem Gerät anmelden.'
     ParentColor = False
@@ -537,15 +537,15 @@ object window: Twindow
   object loginBox: TGroupBox
     Left = 8
     Height = 449
-    Top = 195
+    Top = 204
     Width = 528
     Anchors = [akLeft, akRight, akBottom]
     Caption = 'LOGIN'
     ClientHeight = 429
-    ClientWidth = 526
+    ClientWidth = 524
     TabOrder = 1
     object loginButton: TButton
-      Left = 396
+      Left = 394
       Height = 40
       Top = 99
       Width = 128
@@ -569,7 +569,7 @@ object window: Twindow
       Left = 8
       Height = 28
       Top = 3
-      Width = 425
+      Width = 399
       Anchors = [akLeft, akBottom]
       Caption = 'Bitte melde dich mit deinen Zugangsdaten an.'
       Font.Color = clRed
@@ -579,9 +579,9 @@ object window: Twindow
     end
     object uname: TEdit
       Left = 200
-      Height = 25
-      Top = 40
-      Width = 323
+      Height = 23
+      Top = 42
+      Width = 321
       Anchors = [akLeft, akRight, akBottom]
       OnKeyDown = FormKeyDown
       TabOrder = 0
@@ -589,9 +589,9 @@ object window: Twindow
     end
     object passwd: TEdit
       Left = 200
-      Height = 25
-      Top = 72
-      Width = 323
+      Height = 23
+      Top = 74
+      Width = 321
       Anchors = [akLeft, akRight, akBottom]
       EchoMode = emPassword
       OnKeyDown = FormKeyDown
@@ -652,15 +652,15 @@ object window: Twindow
       Left = 8
       Height = 88
       Top = 144
-      Width = 509
+      Width = 507
       Anchors = [akTop, akLeft, akRight]
       Caption = 'LAUFWERK 1'
       ClientHeight = 68
-      ClientWidth = 507
+      ClientWidth = 503
       Enabled = False
       TabOrder = 4
       object D1logout: TButton
-        Left = 400
+        Left = 396
         Height = 25
         Top = 0
         Width = 107
@@ -670,7 +670,7 @@ object window: Twindow
         TabOrder = 0
       end
       object D1open: TButton
-        Left = 400
+        Left = 396
         Height = 25
         Top = 32
         Width = 107
@@ -681,33 +681,33 @@ object window: Twindow
       end
       object D1L1: TLabel
         Left = 7
-        Height = 19
+        Height = 15
         Top = 9
-        Width = 49
+        Width = 43
         Caption = 'STATUS:'
         ParentColor = False
       end
       object D1L2: TLabel
         Left = 8
-        Height = 19
+        Height = 15
         Top = 29
-        Width = 136
+        Width = 117
         Caption = 'NUTZER VERBUNDEN:'
         ParentColor = False
       end
       object D1L3: TLabel
         Left = 8
-        Height = 19
+        Height = 15
         Top = 48
-        Width = 113
+        Width = 96
         Caption = 'LAUFWERKSPFAD:'
         ParentColor = False
       end
       object D1STAT: TLabel
         Left = 136
-        Height = 19
+        Height = 15
         Top = 8
-        Width = 108
+        Width = 92
         Caption = 'Nicht verbunden.'
         ParentColor = False
       end
@@ -730,15 +730,15 @@ object window: Twindow
       Left = 8
       Height = 88
       Top = 240
-      Width = 509
+      Width = 507
       Anchors = [akTop, akLeft, akRight]
       Caption = 'LAUFWERK 2'
       ClientHeight = 68
-      ClientWidth = 507
+      ClientWidth = 503
       Enabled = False
       TabOrder = 5
       object D2logout: TButton
-        Left = 400
+        Left = 396
         Height = 25
         Top = 0
         Width = 107
@@ -748,7 +748,7 @@ object window: Twindow
         TabOrder = 0
       end
       object D2open: TButton
-        Left = 400
+        Left = 396
         Height = 25
         Top = 32
         Width = 107
@@ -759,33 +759,33 @@ object window: Twindow
       end
       object D2L1: TLabel
         Left = 7
-        Height = 19
+        Height = 15
         Top = 9
-        Width = 49
+        Width = 43
         Caption = 'STATUS:'
         ParentColor = False
       end
       object D2L2: TLabel
         Left = 8
-        Height = 19
+        Height = 15
         Top = 29
-        Width = 136
+        Width = 117
         Caption = 'NUTZER VERBUNDEN:'
         ParentColor = False
       end
       object D2L3: TLabel
         Left = 8
-        Height = 19
+        Height = 15
         Top = 48
-        Width = 113
+        Width = 96
         Caption = 'LAUFWERKSPFAD:'
         ParentColor = False
       end
       object D2STAT: TLabel
         Left = 136
-        Height = 19
+        Height = 15
         Top = 9
-        Width = 108
+        Width = 92
         Caption = 'Nicht verbunden.'
         ParentColor = False
       end
@@ -808,15 +808,15 @@ object window: Twindow
       Left = 8
       Height = 88
       Top = 336
-      Width = 509
+      Width = 507
       Anchors = [akTop, akLeft, akRight]
       Caption = 'LAUFWERK 3'
       ClientHeight = 68
-      ClientWidth = 507
+      ClientWidth = 503
       Enabled = False
       TabOrder = 6
       object D3logout: TButton
-        Left = 400
+        Left = 396
         Height = 25
         Top = 0
         Width = 107
@@ -826,7 +826,7 @@ object window: Twindow
         TabOrder = 0
       end
       object D3open: TButton
-        Left = 400
+        Left = 396
         Height = 25
         Top = 32
         Width = 107
@@ -837,33 +837,33 @@ object window: Twindow
       end
       object D3L1: TLabel
         Left = 7
-        Height = 19
+        Height = 15
         Top = 9
-        Width = 49
+        Width = 43
         Caption = 'STATUS:'
         ParentColor = False
       end
       object D3L2: TLabel
         Left = 8
-        Height = 19
+        Height = 15
         Top = 29
-        Width = 136
+        Width = 117
         Caption = 'NUTZER VERBUNDEN:'
         ParentColor = False
       end
       object D3L3: TLabel
         Left = 8
-        Height = 19
+        Height = 15
         Top = 48
-        Width = 113
+        Width = 96
         Caption = 'LAUFWERKSPFAD:'
         ParentColor = False
       end
       object D3STAT: TLabel
         Left = 136
-        Height = 19
+        Height = 15
         Top = 9
-        Width = 108
+        Width = 92
         Caption = 'Nicht verbunden.'
         ParentColor = False
       end
@@ -885,19 +885,19 @@ object window: Twindow
   end
   object newsBox: TGroupBox
     Left = 8
-    Height = 68
+    Height = 77
     Top = 112
     Width = 529
     Anchors = [akTop, akLeft, akRight, akBottom]
     Caption = 'HINWEISE'
-    ClientHeight = 48
-    ClientWidth = 527
+    ClientHeight = 57
+    ClientWidth = 525
     TabOrder = 2
     object news: TMemo
       Left = 0
-      Height = 43
+      Height = 52
       Top = 0
-      Width = 524
+      Width = 522
       Anchors = [akTop, akLeft, akRight, akBottom]
       Lines.Strings = (
         'news'
@@ -919,17 +919,17 @@ object window: Twindow
   end
   object usersBox: TGroupBox
     Left = 544
-    Height = 575
+    Height = 584
     Top = 112
     Width = 471
     Anchors = [akTop, akRight, akBottom]
     Caption = 'NUTZERLISTE'
-    ClientHeight = 555
-    ClientWidth = 469
+    ClientHeight = 564
+    ClientWidth = 467
     TabOrder = 0
     object search: TEdit
-      Left = 4
-      Height = 25
+      Left = 2
+      Height = 23
       Top = 0
       Width = 464
       Anchors = [akTop, akRight]
@@ -939,8 +939,8 @@ object window: Twindow
       TextHint = 'Suchen'
     end
     object usernames: TListBox
-      Left = 4
-      Height = 526
+      Left = 2
+      Height = 535
       Top = 24
       Width = 464
       Anchors = [akTop, akRight, akBottom]
@@ -950,13 +950,12 @@ object window: Twindow
       ScrollWidth = 462
       TabOrder = 1
       TabStop = False
-      TopIndex = -1
     end
   end
   object pwChangeButton: TButton
     Left = 416
     Height = 25
-    Top = 661
+    Top = 670
     Width = 123
     Anchors = [akRight, akBottom]
     Caption = 'Passwort ändern'
@@ -965,9 +964,9 @@ object window: Twindow
   end
   object noNetworkInfo: TLabel
     Left = 8
-    Height = 19
-    Top = 667
-    Width = 33
+    Height = 15
+    Top = 680
+    Width = 27
     Anchors = [akLeft, akBottom]
     Caption = 'PING'
     Font.Color = clWhite
@@ -977,9 +976,9 @@ object window: Twindow
   end
   object noNetworkHead: TLabel
     Left = 200
-    Height = 70
+    Height = 68
     Top = 264
-    Width = 653
+    Width = 608
     Caption = 'Keine Netzwerkverbindung'
     Font.Color = clWhite
     Font.Height = -51
@@ -991,7 +990,7 @@ object window: Twindow
     Left = 336
     Height = 37
     Top = 336
-    Width = 352
+    Width = 325
     Caption = 'Bitte warte einen Moment...'
     Font.Color = clWhite
     Font.Height = -27
