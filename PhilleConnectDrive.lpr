@@ -8,7 +8,7 @@ uses
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms, PCS, USMBShare, UGetMacAdress, UChangePassword,
-  USMBThread, UEasterEgg, URequestThread
+  UResetStudentPassword, USMBThread, UEasterEgg, URequestThread
   { you can add units after this };
 
 {$R *.res}
@@ -18,6 +18,7 @@ begin
   Application.Initialize;
   Application.CreateForm(Twindow, window);
   Application.CreateForm(TCPForm, CPForm);
+  Application.CreateForm(TRSPForm, RSPForm);
   Application.CreateForm(TEasterEgg, EasterEgg);
   Application.Run;
 end.

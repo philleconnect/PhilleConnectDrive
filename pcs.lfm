@@ -12,7 +12,7 @@ object window: Twindow
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   OnKeyDown = FormKeyDown
-  LCLVersion = '1.8.4.0'
+  LCLVersion = '2.0.4.0'
   object logo: TImage
     Left = 8
     Height = 90
@@ -683,7 +683,7 @@ object window: Twindow
         Left = 7
         Height = 15
         Top = 9
-        Width = 43
+        Width = 45
         Caption = 'STATUS:'
         ParentColor = False
       end
@@ -699,7 +699,7 @@ object window: Twindow
         Left = 8
         Height = 15
         Top = 48
-        Width = 96
+        Width = 97
         Caption = 'LAUFWERKSPFAD:'
         ParentColor = False
       end
@@ -761,7 +761,7 @@ object window: Twindow
         Left = 7
         Height = 15
         Top = 9
-        Width = 43
+        Width = 45
         Caption = 'STATUS:'
         ParentColor = False
       end
@@ -777,7 +777,7 @@ object window: Twindow
         Left = 8
         Height = 15
         Top = 48
-        Width = 96
+        Width = 97
         Caption = 'LAUFWERKSPFAD:'
         ParentColor = False
       end
@@ -839,7 +839,7 @@ object window: Twindow
         Left = 7
         Height = 15
         Top = 9
-        Width = 43
+        Width = 45
         Caption = 'STATUS:'
         ParentColor = False
       end
@@ -855,7 +855,7 @@ object window: Twindow
         Left = 8
         Height = 15
         Top = 48
-        Width = 96
+        Width = 97
         Caption = 'LAUFWERKSPFAD:'
         ParentColor = False
       end
@@ -978,7 +978,7 @@ object window: Twindow
     Left = 200
     Height = 68
     Top = 264
-    Width = 608
+    Width = 609
     Caption = 'Keine Netzwerkverbindung'
     Font.Color = clWhite
     Font.Height = -51
@@ -1024,6 +1024,14 @@ object window: Twindow
       object changePassword: TMenuItem
         Caption = 'Passwort ändern'
         OnClick = changePasswordClick
+      end
+    end
+    object sAccountMenu: TMenuItem
+      Caption = 'Schüleraccounts'
+      Visible = False
+      object resetAccount: TMenuItem
+        Caption = 'Schülerpasswort zurücksetzen'
+        OnClick = resetAccountClick
       end
     end
     object sHelpMenu: TMenuItem

@@ -1,4 +1,4 @@
-//Copyright 2016-2018 Johannes Kreutz.
+//Copyright 2016-2019 Johannes Kreutz.
 //Alle Rechte vorbehalten.
 unit PCS;
 
@@ -9,8 +9,8 @@ interface
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
   StdCtrls, Menus, USMBShare, HTTPSend, synacode, fpjson, jsonparser, LCLType,
-  UGetMacAdress, UGetIPAdress, StrUtils, UChangePassword, ssl_openssl,
-  UEasterEgg, resolve, UPingThread, lclintf, URequestThread;
+  UGetMacAdress, UGetIPAdress, StrUtils, UChangePassword, UResetStudentPassword,
+  ssl_openssl, UEasterEgg, resolve, UPingThread, lclintf, URequestThread;
 
 type
 
@@ -18,6 +18,8 @@ type
 
   Twindow = class(TForm)
     actionLabel: TLabel;
+    sAccountMenu: TMenuItem;
+    resetAccount: TMenuItem;
     sHelpMenu: TMenuItem;
     onlineInfos: TMenuItem;
     noNetworkSub: TLabel;
@@ -91,6 +93,7 @@ type
     procedure loginButtonClick(Sender: TObject);
     procedure onlineInfosClick(Sender: TObject);
     procedure reloadTimerTimer(Sender: TObject);
+    procedure resetAccountClick(Sender: TObject);
     procedure searchChange(Sender: TObject);
     procedure loadUsers;
     procedure usernamesSelectionChange(Sender: TObject; User: boolean);
@@ -137,6 +140,8 @@ type
     //Zugriff ohne Serververbindung erlauben / sperren
     procedure setAllowOffline(value: string);
     procedure setHelpURL(url: string);
+    //Schalte Schülerpasswort-Reset-UI auf Lehrerrechnern frei
+    procedure enableStudentPasswordReset(input: string);
     function sendRequest(url, params: string): string;
     function MemStreamToString(Strm: TMemoryStream): AnsiString;
     function ValidateIP(IP4: string): Boolean;
@@ -170,7 +175,7 @@ procedure Twindow.FormCreate(Sender: TObject);
 var
    version, build: string;
 begin
-   version:='1.5.1';
+   version:='1.6';
    //build:='1F168';
    groupFoldersMounted:=false;
    showedGroupfolderWarning:=false;
@@ -240,6 +245,11 @@ end;
 procedure Twindow.reloadTimerTimer(Sender: TObject);
 begin
   checkNetworkConnection;
+end;
+
+procedure Twindow.resetAccountClick(Sender: TObject);
+begin
+  RSPForm.showModal;
 end;
 
 procedure Twindow.clearButtonClick(Sender: TObject);
@@ -619,6 +629,8 @@ begin
           loadTextBox(jData.FindPath(IntToStr(c)+'[1]').AsString);
         'helpurl':
           setHelpURL(jData.FindPath(IntToStr(c)+'[1]').AsString);
+        'isteachermachine':
+          enableStudentPasswordReset(jData.FindPath(IntToStr(c)+'[1]').AsString);
       end;
       c:=c+1;
     end;
@@ -1016,6 +1028,13 @@ begin
   if (url <> '') then begin
     helpURL:=url;
     sHelpMenu.visible:=true;
+  end;
+end;
+
+procedure Twindow.enableStudentPasswordReset(input: string);
+begin
+  if (input = '1') then begin
+    sAccountMenu.visible:=true;
   end;
 end;
 
