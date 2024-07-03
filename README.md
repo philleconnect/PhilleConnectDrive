@@ -1,3 +1,5 @@
+__Archived: Not actively maintained anymore!__
+
 # PhilleConnectDrive
 This is the Client application of PhilleConnect. It allows you to connect to your private and the configured public drives.
 
